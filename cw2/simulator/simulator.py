@@ -2,8 +2,8 @@ import os, sys, argparse
 dirpath = os.path.dirname(os.path.realpath(__file__))
 sys.path.insert(0, os.path.join(dirpath,'lib'))
 
-from config import ConfigParser
-from packet import Packet, PacketTypes
+from lib.config import ConfigParser
+from lib.packet import Packet, PacketTypes
 
 """  
     The Simulator class loads the configuration and runs each

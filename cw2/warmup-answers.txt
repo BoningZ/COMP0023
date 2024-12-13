@@ -1,0 +1,12 @@
+A1: No IGP implementation can avoid dropping the packet at time 2 because routing tables are not yet populated due to the inherent delay in control message propagation and convergence time.
+
+A2: The two packets from r1 to r3 follow different paths due to ECMP; packets from r3 to r1 would follow the same path as only one shortest path exists.
+
+A3: Effect on Path Computations: The high updateInterval for r2 slows its processing of IGP messages, delaying updates to the network topology and causing path computations involving r2 to take longer, potentially leading to suboptimal or outdated paths being used temporarily; Effect on Packet Delivery: The delayed updates from r2 result in forwarding inconsistencies, which can cause packet drops, delays, or misrouting for packets traversing paths that depend on r2.
+
+A4: The failure of the r3-r4 link at time 30 causes packets sent from r1 to r4 to be misrouted or enter a routing loop (e.g., between r2 and r3) due to outdated routing tables; delivery resumes only after the network converges, delayed by the 5-time-unit updateInterval.
+
+A5: Temporary Blackhole:
+    Trace: B5-trace.txt, at time 10, the link between r3 and r4 goes down, causing a packet sent from r3 to r4 to be dropped. This blackhole is temporary as the network reconverges by time 14, and packets are successfully rerouted via an alternative path.
+    Permanent Blackhole:
+    Trace: B6-trace.txt, at time 15, both r2-r3 and r4-r5 links fail, isolating r3 and r4 from parts of the network. This creates a permanent blackhole as no reconvergence occurs to restore connectivity to the affected nodes.
