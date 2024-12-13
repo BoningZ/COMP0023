@@ -47,6 +47,23 @@ class IGP(AbstractRoutingDaemon):
         # Reset sentPerInterface for the new round
         self._sentPerInterface = {iface: False for iface in interfaces2state}
 
+        for iface, state in interfaces2state.items():
+            neighbor = self._getNeighborFromInterface(iface)
+            if state == 'down' and neighbor:
+                # Remove edge if the link is down
+                if self._graph.has_edge(self._id, neighbor):
+                    print(f"[IGP] Removing edge between {self._id} and {neighbor} due to interface {iface} down.")
+                    self._graph.remove_edge(self._id, neighbor)
+                    self._edgeTimestamps.pop((self._id, neighbor), None)
+            elif state == 'up' and neighbor:
+                # Add or update edge if the link is up
+                print(f"[IGP] Adding/updating edge between {self._id} and {neighbor} due to interface {iface} up.")
+                self._graph.add_edge(self._id, neighbor, weight=1)
+                self._edgeTimestamps[(self._id, neighbor)] = currentTime
+
+        # Recompute shortest paths to reflect the updated topology
+        self._computeShortestPaths()
+
     def _getNeighborFromInterface(self, iface):
         """Determine the neighbor router connected to the given interface."""
         return self._interfaceToNeighbor.get(iface)
@@ -103,8 +120,14 @@ class IGP(AbstractRoutingDaemon):
             print(f"[IGP] Router {self._id}: No graph data available for path computation.")
             return
 
+        # Initialize a set of all nodes in the graph
+        all_nodes = set(self._graph.nodes)
+
         try:
             shortest_paths = nx.single_source_dijkstra_path(self._graph, self._id, weight='weight')
+            reachable_nodes = set(shortest_paths.keys())
+
+            # Update forwarding table for reachable nodes
             for dest, path in shortest_paths.items():
                 if dest == self._id:
                     continue
@@ -113,9 +136,17 @@ class IGP(AbstractRoutingDaemon):
                     # Handle ECMP by finding all equal-cost paths
                     all_next_hops = [iface for iface in self._interfaceToNeighbor if self._interfaceToNeighbor[iface] == next_hop]
                     self._fwd_table.setEntry(dest, all_next_hops)
+
+            # Remove unreachable nodes from the forwarding table
+            unreachable_nodes = all_nodes - reachable_nodes
+            for node in unreachable_nodes:
+                self._fwd_table.setEntry(node, [])
+
             print(f"[IGP] Router {self._id}: Updated forwarding table:\n{self._fwd_table.getDescription(self._id)}")
         except nx.NetworkXNoPath:
-            print(f"[IGP] Router {self._id}: No path to destination.")
+            print(f"[IGP] Router {self._id}: No path to destination. Clearing forwarding table.")
+            for node in all_nodes:
+                self._fwd_table.setEntry(node, [])
 
 
 
