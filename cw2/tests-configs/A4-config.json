@@ -1,0 +1,411 @@
+{
+  "routers": [
+    {
+      "rId": "LasVegas",
+      "numOfInterfaces": 3,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "LosAngeles",
+      "numOfInterfaces": 3,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "Dallas",
+      "numOfInterfaces": 4,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "Phoenix",
+      "numOfInterfaces": 3,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "SantaClara",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "Portland",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "Sacramento",
+      "numOfInterfaces": 4,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "PaloAlto",
+      "numOfInterfaces": 3,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "Tacoma",
+      "numOfInterfaces": 3,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "Seattle",
+      "numOfInterfaces": 6,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "Atlanta",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "Houston",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "Spokane",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "Boise",
+      "numOfInterfaces": 3,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "SaltLakeCity",
+      "numOfInterfaces": 5,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "Minneapolis",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "Chicago",
+      "numOfInterfaces": 4,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "Rochester",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "Newark",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "WashingtonDC",
+      "numOfInterfaces": 3,
+      "routingProtocol": "IGP"
+    }
+  ],
+  "links": [
+    {
+      "id": "link0",
+      "interfaces": ["LasVegas-link0","LosAngeles-link0"],
+      "status": "up"
+    },
+    {
+      "id": "link1",
+      "interfaces": ["LasVegas-link1","Phoenix-link1"],
+      "status": "up"
+    },
+    {
+      "id": "link2",
+      "interfaces": ["LasVegas-link2","SaltLakeCity-link2"],
+      "status": "up"
+    },
+    {
+      "id": "link3",
+      "interfaces": ["LosAngeles-link3","Phoenix-link3"],
+      "status": "up"
+    },
+    {
+      "id": "link4",
+      "interfaces": ["LosAngeles-link4","SantaClara-link4"],
+      "status": "up"
+    },
+    {
+      "id": "link5",
+      "interfaces": ["Dallas-link5","Chicago-link5"],
+      "status": "up"
+    },
+    {
+      "id": "link6",
+      "interfaces": ["Dallas-link6","Phoenix-link6"],
+      "status": "up"
+    },
+    {
+      "id": "link7",
+      "interfaces": ["Dallas-link7","Houston-link7"],
+      "status": "up"
+    },
+    {
+      "id": "link8",
+      "interfaces": ["Dallas-link8","WashingtonDC-link8"],
+      "status": "up"
+    },
+    {
+      "id": "link9",
+      "interfaces": ["SantaClara-link9","PaloAlto-link9"],
+      "status": "up"
+    },
+    {
+      "id": "link10",
+      "interfaces": ["Portland-link10","Tacoma-link10"],
+      "status": "up"
+    },
+    {
+      "id": "link11",
+      "interfaces": ["Portland-link11","Sacramento-link11"],
+      "status": "up"
+    },
+    {
+      "id": "link12",
+      "interfaces": ["Sacramento-link12","Tacoma-link12"],
+      "status": "up"
+    },
+    {
+      "id": "link13",
+      "interfaces": ["Sacramento-link13","SaltLakeCity-link13"],
+      "status": "up"
+    },
+    {
+      "id": "link14",
+      "interfaces": ["Sacramento-link14","PaloAlto-link14"],
+      "status": "up"
+    },
+    {
+      "id": "link15",
+      "interfaces": ["PaloAlto-link15","Seattle-link15"],
+      "status": "up"
+    },
+    {
+      "id": "link16",
+      "interfaces": ["Tacoma-link16","Seattle-link16"],
+      "status": "up"
+    },
+    {
+      "id": "link17",
+      "interfaces": ["Seattle-link17","Spokane-link17"],
+      "status": "up"
+    },
+    {
+      "id": "link18",
+      "interfaces": ["Seattle-link18","Boise-link18"],
+      "status": "up"
+    },
+    {
+      "id": "link19",
+      "interfaces": ["Seattle-link19","SaltLakeCity-link19"],
+      "status": "up"
+    },
+    {
+      "id": "link20",
+      "interfaces": ["Seattle-link20","Minneapolis-link20"],
+      "status": "up"
+    },
+    {
+      "id": "link21",
+      "interfaces": ["Atlanta-link21","WashingtonDC-link21"],
+      "status": "up"
+    },
+    {
+      "id": "link22",
+      "interfaces": ["Atlanta-link22","Houston-link22"],
+      "status": "up"
+    },
+    {
+      "id": "link23",
+      "interfaces": ["Spokane-link23","Boise-link23"],
+      "status": "up"
+    },
+    {
+      "id": "link24",
+      "interfaces": ["Boise-link24","SaltLakeCity-link24"],
+      "status": "up"
+    },
+    {
+      "id": "link25",
+      "interfaces": ["SaltLakeCity-link25","Chicago-link25"],
+      "status": "up"
+    },
+    {
+      "id": "link26",
+      "interfaces": ["Minneapolis-link26","Chicago-link26"],
+      "status": "up"
+    },
+    {
+      "id": "link27",
+      "interfaces": ["Chicago-link27","Rochester-link27"],
+      "status": "up"
+    },
+    {
+      "id": "link28",
+      "interfaces": ["Rochester-link28","Newark-link28"],
+      "status": "up"
+    },
+    {
+      "id": "link29",
+      "interfaces": ["Newark-link29","WashingtonDC-link29"],
+      "status": "up"
+    }
+  ],
+  "routingProtocols": {
+    "IGP": {
+      "LasVegas": {
+        "weights":{
+          "LasVegas-link0": 10,
+          "LasVegas-link1": 10,
+          "LasVegas-link2": 20
+        }
+      },
+      "LosAngeles": {
+        "weights":{
+          "LosAngeles-link0": 15,
+          "LosAngeles-link3": 20,
+          "LosAngeles-link4": 15
+        }
+      },
+      "Dallas": {
+        "weights":{
+          "Dallas-link5": 40,
+          "Dallas-link6": 50,
+          "Dallas-link7": 12,
+          "Dallas-link8": 50
+        }
+      },
+      "Phoenix": {
+        "weights":{
+          "Phoenix-link1": 15,
+          "Phoenix-link3": 20,
+          "Phoenix-link6": 50
+        }
+      },
+      "SantaClara": {
+        "weights":{
+          "SantaClara-link4": 15,
+          "SantaClara-link9": 1
+        }
+      },
+      "Portland": {
+        "weights":{
+          "Portland-link10": 6,
+          "Portland-link11": 25
+        }
+      },
+      "Sacramento": {
+        "weights":{
+          "Sacramento-link11": 25,
+          "Sacramento-link12": 30,
+          "Sacramento-link13": 25,
+          "Sacramento-link14": 5
+        }
+      },
+      "PaloAlto": {
+        "weights":{
+          "PaloAlto-link9": 1,
+          "PaloAlto-link14": 5,
+          "PaloAlto-link15": 35
+        }
+      },
+      "Tacoma": {
+        "weights":{
+          "Tacoma-link10": 6,
+          "Tacoma-link12": 30,
+          "Tacoma-link16": 2
+        }
+      },
+      "Seattle": {
+        "weights":{
+          "Seattle-link15": 35,
+          "Seattle-link16": 2,
+          "Seattle-link17": 12,
+          "Seattle-link18": 20,
+          "Seattle-link19": 35,
+          "Seattle-link20": 75
+        }
+      },
+      "Atlanta": {
+        "weights":{
+          "Atlanta-link21": 30,
+          "Atlanta-link22": 35
+        }
+      },
+      "Houston": {
+        "weights":{
+          "Houston-link7": 12,
+          "Houston-link22": 35
+        }
+      },
+      "Spokane": {
+        "weights":{
+          "Spokane-link17": 12,
+          "Spokane-link23": 15
+        }
+      },
+      "Boise": {
+        "weights":{
+          "Boise-link18": 20,
+          "Boise-link23": 15,
+          "Boise-link24": 15
+        }
+      },
+      "SaltLakeCity": {
+        "weights":{
+          "SaltLakeCity-link2": 20,
+          "SaltLakeCity-link13": 25,
+          "SaltLakeCity-link19": 35,
+          "SaltLakeCity-link24": 15,
+          "SaltLakeCity-link25": 65
+        }
+      },
+      "Minneapolis": {
+        "weights":{
+          "Minneapolis-link20": 75,
+          "Minneapolis-link26": 20
+        }
+      },
+      "Chicago": {
+        "weights":{
+          "Chicago-link5": 40,
+          "Chicago-link25": 65,
+          "Chicago-link26": 20,
+          "Chicago-link27": 25
+        }
+      },
+      "Rochester": {
+        "weights":{
+          "Rochester-link27": 25,
+          "Rochester-link28": 10
+        }
+      },
+      "Newark": {
+        "weights":{
+          "Newark-link28": 15,
+          "Newark-link29": 10
+        }
+      },
+      "WashingtonDC": {
+        "weights":{
+          "WashingtonDC-link8": 50,
+          "WashingtonDC-link21": 30,
+          "WashingtonDC-link29": 5
+        }
+      }
+    }
+  },
+  "events": [
+    {
+      "type": "dumpfib",
+      "time": 10,
+      "args": "all"
+    },
+    {
+      "type": "stop",
+      "time": 21
+    }
+  ]
+}

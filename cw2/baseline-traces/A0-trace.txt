@@ -1,0 +1,114 @@
+
+** Configuration Loading **
+
+Reading file tests-configs/A0-config.json
+Created router r0
+Created router r1
+Created router r2
+Created router r3
+Adding link (r0.r0-eth0 <--> r1.r1-eth0)
+Adding link (r0.r0-eth0 <--> r1.r1-eth0)
+Adding link (r1.r1-eth1 <--> r2.r2-eth0)
+Adding link (r1.r1-eth1 <--> r2.r2-eth0)
+Adding link (r1.r1-eth2 <--> r3.r3-eth0)
+Adding link (r1.r1-eth2 <--> r3.r3-eth0)
+Adding link (r2.r2-eth1 <--> r3.r3-eth1)
+Adding link (r2.r2-eth1 <--> r3.r3-eth1)
+Adding Event is dumpfib to occur at 1 with all
+Adding Event is send to occur at 2 with r0 r2
+Adding Event is dumpfib to occur at 8 with all
+Adding Event is send to occur at 15 with r0 r2
+
+
+** Simulation **
+
+= Time 1 =
+FIB router r0
+<empty>
+
+FIB router r1
+<empty>
+
+FIB router r2
+<empty>
+
+FIB router r3
+<empty>
+
+
+= Time 2 =
+Event: Sending one data packet from r0 to r2
+Router r0: No outgoing interfaces, DROP packet type data src r0:5001 dst r2:8080 ttl 255 seq 1
+
+= Time 3 =
+
+= Time 4 =
+
+= Time 5 =
+
+= Time 6 =
+
+= Time 7 =
+
+= Time 8 =
+FIB router r0
+r0 directly connected
+r1 via r0-eth0
+r2 via r0-eth0
+r3 via r0-eth0
+
+FIB router r1
+r0 via r1-eth0
+r1 directly connected
+r2 via r1-eth1
+r3 via r1-eth2
+
+FIB router r2
+r0 via r2-eth0
+r1 via r2-eth0
+r2 directly connected
+r3 via r2-eth1
+
+FIB router r3
+r0 via r3-eth0
+r1 via r3-eth0
+r2 via r3-eth1
+r3 directly connected
+
+
+= Time 9 =
+
+= Time 10 =
+
+= Time 11 =
+
+= Time 12 =
+
+= Time 13 =
+
+= Time 14 =
+
+= Time 15 =
+Event: Sending one data packet from r0 to r2
+Router r0: Sent NEW packet type data src r0:5002 dst r2:8080 ttl 254 seq 2 over outgoing interface r0-eth0
+
+= Time 16 =
+Router r1: Forwarded packet type data src r0:5002 dst r2:8080 ttl 253 seq 2 path (r0->r1) over outgoing interface r1-eth1
+
+= Time 17 =
+Router r2: Received packet type data src r0:5002 dst r2:8080 ttl 253 seq 2 path (r0->r1) (r1->r2)
+
+= Time 18 =
+
+= Time 19 =
+
+= Time 20 =
+
+
+** Simulation Report **
+
+Inconsistent forwarding exact time steps: [1, 2, 3]
+Inconsistent forwarding duration in time units: 3
+Number of FIB writes across all routers: 16
+Number of control-plane packets: 33
+

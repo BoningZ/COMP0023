@@ -1,0 +1,115 @@
+
+** Configuration Loading **
+
+Reading file tests-configs/A3-config.json
+Created router r0
+Created router r1
+Created router r2
+Created router r3
+Adding link (r0.r0-r1 <--> r1.r1-r0)
+Adding link (r0.r0-r1 <--> r1.r1-r0)
+Adding link (r1.r1-r2 <--> r2.r2-r1)
+Adding link (r1.r1-r2 <--> r2.r2-r1)
+Adding link (r1.r1-r3 <--> r3.r3-r1)
+Adding link (r1.r1-r3 <--> r3.r3-r1)
+Adding link (r2.r2-r3 <--> r3.r3-r2)
+Adding link (r2.r2-r3 <--> r3.r3-r2)
+Adding Event is dumpfib to occur at 1 with all
+Adding Event is dumpfib to occur at 14 with all
+Adding Event is send to occur at 15 with r1 r3
+Adding Event is send to occur at 15 with r1 r3
+
+
+** Simulation **
+
+= Time 1 =
+FIB router r0
+<empty>
+
+FIB router r1
+<empty>
+
+FIB router r2
+<empty>
+
+FIB router r3
+<empty>
+
+
+= Time 2 =
+
+= Time 3 =
+
+= Time 4 =
+
+= Time 5 =
+
+= Time 6 =
+
+= Time 7 =
+
+= Time 8 =
+
+= Time 9 =
+
+= Time 10 =
+
+= Time 11 =
+
+= Time 12 =
+
+= Time 13 =
+
+= Time 14 =
+FIB router r0
+r0 directly connected
+r1 via r0-r1
+r2 via r0-r1
+r3 via r0-r1
+
+FIB router r1
+r0 via r1-r0
+r1 directly connected
+r2 via r1-r2
+r3 via r1-r2, r1-r3
+
+FIB router r2
+r0 via r2-r1
+r1 via r2-r1
+r2 directly connected
+r3 via r2-r3
+
+FIB router r3
+r0 via r3-r2
+r1 via r3-r2
+r2 via r3-r2
+r3 directly connected
+
+
+= Time 15 =
+Event: Sending one data packet from r1 to r3
+Router r1: Sent NEW packet type data src r1:5001 dst r3:8080 ttl 254 seq 1 over outgoing interface r1-r3
+Event: Sending one data packet from r1 to r3
+Router r1: Sent NEW packet type data src r1:5002 dst r3:8080 ttl 254 seq 2 over outgoing interface r1-r2
+
+= Time 16 =
+Router r2: Forwarded packet type data src r1:5002 dst r3:8080 ttl 253 seq 2 path (r1->r2) over outgoing interface r2-r3
+Router r3: Received packet type data src r1:5001 dst r3:8080 ttl 254 seq 1 path (r1->r3)
+
+= Time 17 =
+Router r3: Received packet type data src r1:5002 dst r3:8080 ttl 253 seq 2 path (r1->r2) (r2->r3)
+
+= Time 18 =
+
+= Time 19 =
+
+= Time 20 =
+
+
+** Simulation Report **
+
+Inconsistent forwarding exact time steps: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+Inconsistent forwarding duration in time units: 11
+Number of FIB writes across all routers: 19
+Number of control-plane packets: 64
+

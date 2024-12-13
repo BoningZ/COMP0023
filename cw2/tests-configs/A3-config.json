@@ -1,0 +1,106 @@
+{
+  "routers": [
+     {
+      "rId": "r0",
+      "numOfInterfaces": 1,
+      "routingProtocol": "IGP",
+      "updateInterval": 1
+    },
+    {
+      "rId": "r1",
+      "numOfInterfaces": 3,
+      "routingProtocol": "IGP",
+      "updateInterval": 1
+    },
+    {
+      "rId": "r2",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP",
+      "updateInterval": 10
+    },
+    {
+      "rId": "r3",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP",
+      "updateInterval": 1
+    }
+  ],
+  "links": [
+    {
+      "id": "r0-r1",
+      "interfaces": ["r0-r1", "r1-r0"],
+      "status": "up"
+    },
+    {
+      "id": "r1-r2",
+      "interfaces": ["r1-r2", "r2-r1"],
+      "status": "up"
+    },
+    {
+      "id": "r1-r3",
+      "interfaces": ["r1-r3", "r3-r1"],
+      "status": "up"
+    },
+    {
+      "id": "r2-r3",
+      "interfaces": ["r2-r3", "r3-r2"],
+      "status": "up"
+    }
+  ],
+  "routingProtocols": {
+    "IGP": {
+      "r0": {
+        "weights": {
+          "r0-r1": 10
+        }
+      },
+      "r1": {
+        "weights": {
+          "r1-r0": 10,
+          "r1-r2": 10,
+          "r1-r3": 20
+        }
+      },
+      "r2": {
+        "weights": {
+          "r2-r1": 10,
+          "r2-r3": 10
+        }
+      },
+      "r3": {
+        "weights": {
+          "r3-r1": 30,
+          "r3-r2": 10
+        }
+      }
+    }
+  },
+  "events": [
+    {
+      "type": "dumpfib",
+      "time": 1,
+      "args": "all"
+    },
+    {
+      "type": "dumpfib",
+      "time": 14,
+      "args": "all"
+    },
+    {
+      "type": "send",
+      "time": 15,
+      "src": "r1",
+      "dest": "r3"
+    },
+    {
+      "type": "send",
+      "time": 15,
+      "src": "r1",
+      "dest": "r3"
+    },
+    {
+      "type": "stop",
+      "time": 21
+    }
+  ]
+}

@@ -1,0 +1,722 @@
+
+** Configuration Loading **
+
+Reading file tests-configs/C0-config.json
+Created router LasVegas
+Created router LosAngeles
+Created router Dallas
+Created router Phoenix
+Created router SantaClara
+Created router Portland
+Created router Sacramento
+Created router PaloAlto
+Created router Tacoma
+Created router Seattle
+Created router Atlanta
+Created router Houston
+Created router Spokane
+Created router Boise
+Created router SaltLakeCity
+Created router Minneapolis
+Created router Chicago
+Created router Rochester
+Created router Newark
+Created router WashingtonDC
+Adding link (LasVegas.LasVegas-link0 <--> LosAngeles.LosAngeles-link0)
+Adding link (LasVegas.LasVegas-link0 <--> LosAngeles.LosAngeles-link0)
+Adding link (LasVegas.LasVegas-link1 <--> Phoenix.Phoenix-link1)
+Adding link (LasVegas.LasVegas-link1 <--> Phoenix.Phoenix-link1)
+Adding link (LasVegas.LasVegas-link2 <--> SaltLakeCity.SaltLakeCity-link2)
+Adding link (LasVegas.LasVegas-link2 <--> SaltLakeCity.SaltLakeCity-link2)
+Adding link (LosAngeles.LosAngeles-link3 <--> Phoenix.Phoenix-link3)
+Adding link (LosAngeles.LosAngeles-link3 <--> Phoenix.Phoenix-link3)
+Adding link (LosAngeles.LosAngeles-link4 <--> SantaClara.SantaClara-link4)
+Adding link (LosAngeles.LosAngeles-link4 <--> SantaClara.SantaClara-link4)
+Adding link (Dallas.Dallas-link5 <--> Chicago.Chicago-link5)
+Adding link (Dallas.Dallas-link5 <--> Chicago.Chicago-link5)
+Adding link (Dallas.Dallas-link6 <--> Phoenix.Phoenix-link6)
+Adding link (Dallas.Dallas-link6 <--> Phoenix.Phoenix-link6)
+Adding link (Dallas.Dallas-link7 <--> Houston.Houston-link7)
+Adding link (Dallas.Dallas-link7 <--> Houston.Houston-link7)
+Adding link (Dallas.Dallas-link8 <--> WashingtonDC.WashingtonDC-link8)
+Adding link (Dallas.Dallas-link8 <--> WashingtonDC.WashingtonDC-link8)
+Adding link (SantaClara.SantaClara-link9 <--> PaloAlto.PaloAlto-link9)
+Adding link (SantaClara.SantaClara-link9 <--> PaloAlto.PaloAlto-link9)
+Adding link (Portland.Portland-link10 <--> Tacoma.Tacoma-link10)
+Adding link (Portland.Portland-link10 <--> Tacoma.Tacoma-link10)
+Adding link (Portland.Portland-link11 <--> Sacramento.Sacramento-link11)
+Adding link (Portland.Portland-link11 <--> Sacramento.Sacramento-link11)
+Adding link (Sacramento.Sacramento-link12 <--> Tacoma.Tacoma-link12)
+Adding link (Sacramento.Sacramento-link12 <--> Tacoma.Tacoma-link12)
+Adding link (Sacramento.Sacramento-link13 <--> SaltLakeCity.SaltLakeCity-link13)
+Adding link (Sacramento.Sacramento-link13 <--> SaltLakeCity.SaltLakeCity-link13)
+Adding link (Sacramento.Sacramento-link14 <--> PaloAlto.PaloAlto-link14)
+Adding link (Sacramento.Sacramento-link14 <--> PaloAlto.PaloAlto-link14)
+Adding link (PaloAlto.PaloAlto-link15 <--> Seattle.Seattle-link15)
+Adding link (PaloAlto.PaloAlto-link15 <--> Seattle.Seattle-link15)
+Adding link (Tacoma.Tacoma-link16 <--> Seattle.Seattle-link16)
+Adding link (Tacoma.Tacoma-link16 <--> Seattle.Seattle-link16)
+Adding link (Seattle.Seattle-link17 <--> Spokane.Spokane-link17)
+Adding link (Seattle.Seattle-link17 <--> Spokane.Spokane-link17)
+Adding link (Seattle.Seattle-link18 <--> Boise.Boise-link18)
+Adding link (Seattle.Seattle-link18 <--> Boise.Boise-link18)
+Adding link (Seattle.Seattle-link19 <--> SaltLakeCity.SaltLakeCity-link19)
+Adding link (Seattle.Seattle-link19 <--> SaltLakeCity.SaltLakeCity-link19)
+Adding link (Seattle.Seattle-link20 <--> Minneapolis.Minneapolis-link20)
+Adding link (Seattle.Seattle-link20 <--> Minneapolis.Minneapolis-link20)
+Adding link (Atlanta.Atlanta-link21 <--> WashingtonDC.WashingtonDC-link21)
+Adding link (Atlanta.Atlanta-link21 <--> WashingtonDC.WashingtonDC-link21)
+Adding link (Atlanta.Atlanta-link22 <--> Houston.Houston-link22)
+Adding link (Atlanta.Atlanta-link22 <--> Houston.Houston-link22)
+Adding link (Spokane.Spokane-link23 <--> Boise.Boise-link23)
+Adding link (Spokane.Spokane-link23 <--> Boise.Boise-link23)
+Adding link (Boise.Boise-link24 <--> SaltLakeCity.SaltLakeCity-link24)
+Adding link (Boise.Boise-link24 <--> SaltLakeCity.SaltLakeCity-link24)
+Adding link (SaltLakeCity.SaltLakeCity-link25 <--> Chicago.Chicago-link25)
+Adding link (SaltLakeCity.SaltLakeCity-link25 <--> Chicago.Chicago-link25)
+Adding link (Minneapolis.Minneapolis-link26 <--> Chicago.Chicago-link26)
+Adding link (Minneapolis.Minneapolis-link26 <--> Chicago.Chicago-link26)
+Adding link (Chicago.Chicago-link27 <--> Rochester.Rochester-link27)
+Adding link (Chicago.Chicago-link27 <--> Rochester.Rochester-link27)
+Adding link (Rochester.Rochester-link28 <--> Newark.Newark-link28)
+Adding link (Rochester.Rochester-link28 <--> Newark.Newark-link28)
+Adding link (Newark.Newark-link29 <--> WashingtonDC.WashingtonDC-link29)
+Adding link (Newark.Newark-link29 <--> WashingtonDC.WashingtonDC-link29)
+Adding Event is traceroute to occur at 20 with LasVegas Newark
+Adding Event is stopOriginateIcmp to occur at 30 with WashingtonDC WashingtonDC-link8
+Adding Event is traceroute to occur at 35 with LasVegas Newark
+Adding Event is dumpfib to occur at 50 with all
+
+
+** Simulation **
+
+= Time 1 =
+
+= Time 2 =
+
+= Time 3 =
+
+= Time 4 =
+
+= Time 5 =
+
+= Time 6 =
+
+= Time 7 =
+
+= Time 8 =
+
+= Time 9 =
+
+= Time 10 =
+
+= Time 11 =
+
+= Time 12 =
+
+= Time 13 =
+
+= Time 14 =
+
+= Time 15 =
+
+= Time 16 =
+
+= Time 17 =
+
+= Time 18 =
+
+= Time 19 =
+
+= Time 20 =
+Router LasVegas launching traceroute towards Newark
+Router LasVegas: Sent NEW packet type data src LasVegas:50000 dst Newark:2300 ttl 0 seq 10000 over outgoing interface LasVegas-link1
+Router LasVegas: Sent NEW packet type data src LasVegas:50000 dst Newark:2300 ttl 1 seq 10001 over outgoing interface LasVegas-link1
+Router LasVegas: Sent NEW packet type data src LasVegas:50000 dst Newark:2300 ttl 2 seq 10002 over outgoing interface LasVegas-link1
+Router LasVegas: Sent NEW packet type data src LasVegas:50000 dst Newark:2300 ttl 3 seq 10003 over outgoing interface LasVegas-link1
+
+= Time 21 =
+Router Phoenix: Expired TTL, DROP packet 
+Router Phoenix: Forwarded packet type data src LasVegas:50000 dst Newark:2300 ttl 0 seq 10001 path (LasVegas->Phoenix) over outgoing interface Phoenix-link6
+Router Phoenix: Forwarded packet type data src LasVegas:50000 dst Newark:2300 ttl 1 seq 10002 path (LasVegas->Phoenix) over outgoing interface Phoenix-link6
+Router Phoenix: Forwarded packet type data src LasVegas:50000 dst Newark:2300 ttl 2 seq 10003 path (LasVegas->Phoenix) over outgoing interface Phoenix-link6
+
+= Time 22 =
+Router LasVegas: Received packet type icmp src Phoenix:50000 dst LasVegas:50000 ttl 254 seq 10000
+Router Dallas: Expired TTL, DROP packet 
+Router Dallas: Forwarded packet type data src LasVegas:50000 dst Newark:2300 ttl 0 seq 10002 path (LasVegas->Phoenix) (Phoenix->Dallas) over outgoing interface Dallas-link8
+Router Dallas: Forwarded packet type data src LasVegas:50000 dst Newark:2300 ttl 1 seq 10003 path (LasVegas->Phoenix) (Phoenix->Dallas) over outgoing interface Dallas-link8
+
+= Time 23 =
+Router WashingtonDC: Expired TTL, DROP packet 
+Router WashingtonDC: Forwarded packet type data src LasVegas:50000 dst Newark:2300 ttl 0 seq 10003 path (LasVegas->Phoenix) (Phoenix->Dallas) (Dallas->WashingtonDC) over outgoing interface WashingtonDC-link29
+
+= Time 24 =
+Router LasVegas: Received packet type icmp src Dallas:50000 dst LasVegas:50000 ttl 253 seq 10001
+Router Newark: Expired TTL, DROP packet 
+
+= Time 25 =
+
+= Time 26 =
+Router LasVegas: Received packet type icmp src WashingtonDC:50000 dst LasVegas:50000 ttl 252 seq 10002
+
+= Time 27 =
+
+= Time 28 =
+Router LasVegas: Received packet type icmp src Newark:50000 dst LasVegas:50000 ttl 251 seq 10003
+
+Traceroute LasVegas -> Newark
+1: Phoenix
+2: Dallas
+3: WashingtonDC
+4: Newark
+
+= Time 29 =
+
+= Time 30 =
+Set ICMP filter on interface WashingtonDC-link8 of router WashingtonDC
+
+= Time 31 =
+
+= Time 32 =
+
+= Time 33 =
+
+= Time 34 =
+
+= Time 35 =
+Router LasVegas launching traceroute towards Newark
+Router LasVegas: Sent NEW packet type data src LasVegas:50000 dst Newark:2300 ttl 0 seq 10000 over outgoing interface LasVegas-link1
+Router LasVegas: Sent NEW packet type data src LasVegas:50000 dst Newark:2300 ttl 1 seq 10001 over outgoing interface LasVegas-link1
+Router LasVegas: Sent NEW packet type data src LasVegas:50000 dst Newark:2300 ttl 2 seq 10002 over outgoing interface LasVegas-link1
+Router LasVegas: Sent NEW packet type data src LasVegas:50000 dst Newark:2300 ttl 3 seq 10003 over outgoing interface LasVegas-link1
+
+= Time 36 =
+Router Phoenix: Expired TTL, DROP packet 
+Router Phoenix: Forwarded packet type data src LasVegas:50000 dst Newark:2300 ttl 0 seq 10001 path (LasVegas->Phoenix) over outgoing interface Phoenix-link6
+Router Phoenix: Forwarded packet type data src LasVegas:50000 dst Newark:2300 ttl 1 seq 10002 path (LasVegas->Phoenix) over outgoing interface Phoenix-link6
+Router Phoenix: Forwarded packet type data src LasVegas:50000 dst Newark:2300 ttl 2 seq 10003 path (LasVegas->Phoenix) over outgoing interface Phoenix-link6
+
+= Time 37 =
+Router LasVegas: Received packet type icmp src Phoenix:50000 dst LasVegas:50000 ttl 254 seq 10000
+Router Dallas: Expired TTL, DROP packet 
+Router Dallas: Forwarded packet type data src LasVegas:50000 dst Newark:2300 ttl 0 seq 10002 path (LasVegas->Phoenix) (Phoenix->Dallas) over outgoing interface Dallas-link8
+Router Dallas: Forwarded packet type data src LasVegas:50000 dst Newark:2300 ttl 1 seq 10003 path (LasVegas->Phoenix) (Phoenix->Dallas) over outgoing interface Dallas-link8
+
+= Time 38 =
+Router WashingtonDC: Expired TTL, DROP packet 
+Router WashingtonDC: Forwarded packet type data src LasVegas:50000 dst Newark:2300 ttl 0 seq 10003 path (LasVegas->Phoenix) (Phoenix->Dallas) (Dallas->WashingtonDC) over outgoing interface WashingtonDC-link29
+
+= Time 39 =
+Router LasVegas: Received packet type icmp src Dallas:50000 dst LasVegas:50000 ttl 253 seq 10001
+Router Newark: Expired TTL, DROP packet 
+
+= Time 40 =
+
+= Time 41 =
+
+= Time 42 =
+
+= Time 43 =
+Router LasVegas: Received packet type icmp src Newark:50000 dst LasVegas:50000 ttl 251 seq 10003
+
+Traceroute LasVegas -> Newark
+1: Phoenix
+2: Dallas
+3:
+4: Newark
+
+= Time 44 =
+
+= Time 45 =
+
+= Time 46 =
+
+= Time 47 =
+
+= Time 48 =
+
+= Time 49 =
+
+= Time 50 =
+FIB router LasVegas
+Atlanta via LasVegas-link1
+Boise via LasVegas-link2
+Chicago via LasVegas-link2
+Dallas via LasVegas-link1
+Houston via LasVegas-link1
+LasVegas directly connected
+LosAngeles via LasVegas-link0
+Minneapolis via LasVegas-link2
+Newark via LasVegas-link1
+PaloAlto via LasVegas-link0
+Phoenix via LasVegas-link1
+Portland via LasVegas-link0
+Rochester via LasVegas-link2
+Sacramento via LasVegas-link0
+SaltLakeCity via LasVegas-link2
+SantaClara via LasVegas-link0
+Seattle via LasVegas-link2
+Spokane via LasVegas-link2
+Tacoma via LasVegas-link2
+WashingtonDC via LasVegas-link1
+
+FIB router LosAngeles
+Atlanta via LosAngeles-link3
+Boise via LosAngeles-link0
+Chicago via LosAngeles-link0
+Dallas via LosAngeles-link3
+Houston via LosAngeles-link3
+LasVegas via LosAngeles-link0
+LosAngeles directly connected
+Minneapolis via LosAngeles-link0
+Newark via LosAngeles-link3
+PaloAlto via LosAngeles-link4
+Phoenix via LosAngeles-link3
+Portland via LosAngeles-link4
+Rochester via LosAngeles-link0
+Sacramento via LosAngeles-link4
+SaltLakeCity via LosAngeles-link0
+SantaClara via LosAngeles-link4
+Seattle via LosAngeles-link4
+Spokane via LosAngeles-link4
+Tacoma via LosAngeles-link4
+WashingtonDC via LosAngeles-link3
+
+FIB router Dallas
+Atlanta via Dallas-link7
+Boise via Dallas-link6
+Chicago via Dallas-link5
+Dallas directly connected
+Houston via Dallas-link7
+LasVegas via Dallas-link6
+LosAngeles via Dallas-link6
+Minneapolis via Dallas-link5
+Newark via Dallas-link8
+PaloAlto via Dallas-link6
+Phoenix via Dallas-link6
+Portland via Dallas-link6
+Rochester via Dallas-link5
+Sacramento via Dallas-link6
+SaltLakeCity via Dallas-link6
+SantaClara via Dallas-link6
+Seattle via Dallas-link6
+Spokane via Dallas-link6
+Tacoma via Dallas-link6
+WashingtonDC via Dallas-link8
+
+FIB router Phoenix
+Atlanta via Phoenix-link6
+Boise via Phoenix-link1
+Chicago via Phoenix-link6
+Dallas via Phoenix-link6
+Houston via Phoenix-link6
+LasVegas via Phoenix-link1
+LosAngeles via Phoenix-link3
+Minneapolis via Phoenix-link6
+Newark via Phoenix-link6
+PaloAlto via Phoenix-link3
+Phoenix directly connected
+Portland via Phoenix-link3
+Rochester via Phoenix-link6
+Sacramento via Phoenix-link3
+SaltLakeCity via Phoenix-link1
+SantaClara via Phoenix-link3
+Seattle via Phoenix-link1
+Spokane via Phoenix-link1
+Tacoma via Phoenix-link3
+WashingtonDC via Phoenix-link6
+
+FIB router SantaClara
+Atlanta via SantaClara-link4
+Boise via SantaClara-link9
+Chicago via SantaClara-link9
+Dallas via SantaClara-link4
+Houston via SantaClara-link4
+LasVegas via SantaClara-link4
+LosAngeles via SantaClara-link4
+Minneapolis via SantaClara-link9
+Newark via SantaClara-link9
+PaloAlto via SantaClara-link9
+Phoenix via SantaClara-link4
+Portland via SantaClara-link9
+Rochester via SantaClara-link9
+Sacramento via SantaClara-link9
+SaltLakeCity via SantaClara-link9
+SantaClara directly connected
+Seattle via SantaClara-link9
+Spokane via SantaClara-link9
+Tacoma via SantaClara-link9
+WashingtonDC via SantaClara-link4
+
+FIB router Portland
+Atlanta via Portland-link11
+Boise via Portland-link10
+Chicago via Portland-link10
+Dallas via Portland-link11
+Houston via Portland-link11
+LasVegas via Portland-link11
+LosAngeles via Portland-link11
+Minneapolis via Portland-link10
+Newark via Portland-link10
+PaloAlto via Portland-link11
+Phoenix via Portland-link11
+Portland directly connected
+Rochester via Portland-link10
+Sacramento via Portland-link11
+SaltLakeCity via Portland-link10
+SantaClara via Portland-link11
+Seattle via Portland-link10
+Spokane via Portland-link10
+Tacoma via Portland-link10
+WashingtonDC via Portland-link10
+
+FIB router Sacramento
+Atlanta via Sacramento-link14
+Boise via Sacramento-link13
+Chicago via Sacramento-link13
+Dallas via Sacramento-link14
+Houston via Sacramento-link14
+LasVegas via Sacramento-link14
+LosAngeles via Sacramento-link14
+Minneapolis via Sacramento-link12
+Newark via Sacramento-link13
+PaloAlto via Sacramento-link14
+Phoenix via Sacramento-link14
+Portland via Sacramento-link11
+Rochester via Sacramento-link13
+Sacramento directly connected
+SaltLakeCity via Sacramento-link13
+SantaClara via Sacramento-link14
+Seattle via Sacramento-link12
+Spokane via Sacramento-link12
+Tacoma via Sacramento-link12
+WashingtonDC via Sacramento-link13
+
+FIB router PaloAlto
+Atlanta via PaloAlto-link9
+Boise via PaloAlto-link14
+Chicago via PaloAlto-link14
+Dallas via PaloAlto-link9
+Houston via PaloAlto-link9
+LasVegas via PaloAlto-link9
+LosAngeles via PaloAlto-link9
+Minneapolis via PaloAlto-link15
+Newark via PaloAlto-link14
+PaloAlto directly connected
+Phoenix via PaloAlto-link9
+Portland via PaloAlto-link14
+Rochester via PaloAlto-link14
+Sacramento via PaloAlto-link14
+SaltLakeCity via PaloAlto-link14
+SantaClara via PaloAlto-link9
+Seattle via PaloAlto-link15
+Spokane via PaloAlto-link15
+Tacoma via PaloAlto-link14
+WashingtonDC via PaloAlto-link9
+
+FIB router Tacoma
+Atlanta via Tacoma-link16
+Boise via Tacoma-link16
+Chicago via Tacoma-link16
+Dallas via Tacoma-link16
+Houston via Tacoma-link16
+LasVegas via Tacoma-link16
+LosAngeles via Tacoma-link12
+Minneapolis via Tacoma-link16
+Newark via Tacoma-link16
+PaloAlto via Tacoma-link12
+Phoenix via Tacoma-link16
+Portland via Tacoma-link10
+Rochester via Tacoma-link16
+Sacramento via Tacoma-link12
+SaltLakeCity via Tacoma-link16
+SantaClara via Tacoma-link12
+Seattle via Tacoma-link16
+Spokane via Tacoma-link16
+Tacoma directly connected
+WashingtonDC via Tacoma-link16
+
+FIB router Seattle
+Atlanta via Seattle-link19, Seattle-link18
+Boise via Seattle-link18
+Chicago via Seattle-link20
+Dallas via Seattle-link19, Seattle-link18
+Houston via Seattle-link19, Seattle-link18
+LasVegas via Seattle-link19, Seattle-link18
+LosAngeles via Seattle-link15
+Minneapolis via Seattle-link20
+Newark via Seattle-link20
+PaloAlto via Seattle-link15
+Phoenix via Seattle-link19, Seattle-link18
+Portland via Seattle-link16
+Rochester via Seattle-link20
+Sacramento via Seattle-link16
+SaltLakeCity via Seattle-link19, Seattle-link18
+SantaClara via Seattle-link15
+Seattle directly connected
+Spokane via Seattle-link17
+Tacoma via Seattle-link16
+WashingtonDC via Seattle-link20
+
+FIB router Atlanta
+Atlanta directly connected
+Boise via Atlanta-link22
+Chicago via Atlanta-link21
+Dallas via Atlanta-link22
+Houston via Atlanta-link22
+LasVegas via Atlanta-link22
+LosAngeles via Atlanta-link22
+Minneapolis via Atlanta-link21
+Newark via Atlanta-link21
+PaloAlto via Atlanta-link22
+Phoenix via Atlanta-link22
+Portland via Atlanta-link22
+Rochester via Atlanta-link21
+Sacramento via Atlanta-link22
+SaltLakeCity via Atlanta-link22
+SantaClara via Atlanta-link22
+Seattle via Atlanta-link22
+Spokane via Atlanta-link22
+Tacoma via Atlanta-link22
+WashingtonDC via Atlanta-link21
+
+FIB router Houston
+Atlanta via Houston-link22
+Boise via Houston-link7
+Chicago via Houston-link7
+Dallas via Houston-link7
+Houston directly connected
+LasVegas via Houston-link7
+LosAngeles via Houston-link7
+Minneapolis via Houston-link7
+Newark via Houston-link7
+PaloAlto via Houston-link7
+Phoenix via Houston-link7
+Portland via Houston-link7
+Rochester via Houston-link7
+Sacramento via Houston-link7
+SaltLakeCity via Houston-link7
+SantaClara via Houston-link7
+Seattle via Houston-link7
+Spokane via Houston-link7
+Tacoma via Houston-link7
+WashingtonDC via Houston-link7
+
+FIB router Spokane
+Atlanta via Spokane-link23
+Boise via Spokane-link23
+Chicago via Spokane-link23
+Dallas via Spokane-link23
+Houston via Spokane-link23
+LasVegas via Spokane-link23
+LosAngeles via Spokane-link23
+Minneapolis via Spokane-link17
+Newark via Spokane-link23
+PaloAlto via Spokane-link17
+Phoenix via Spokane-link23
+Portland via Spokane-link17
+Rochester via Spokane-link23
+Sacramento via Spokane-link17
+SaltLakeCity via Spokane-link23
+SantaClara via Spokane-link17
+Seattle via Spokane-link17
+Spokane directly connected
+Tacoma via Spokane-link17
+WashingtonDC via Spokane-link23
+
+FIB router Boise
+Atlanta via Boise-link24
+Boise directly connected
+Chicago via Boise-link24
+Dallas via Boise-link24
+Houston via Boise-link24
+LasVegas via Boise-link24
+LosAngeles via Boise-link24
+Minneapolis via Boise-link18
+Newark via Boise-link24
+PaloAlto via Boise-link24
+Phoenix via Boise-link24
+Portland via Boise-link18
+Rochester via Boise-link24
+Sacramento via Boise-link24
+SaltLakeCity via Boise-link24
+SantaClara via Boise-link24
+Seattle via Boise-link18
+Spokane via Boise-link23
+Tacoma via Boise-link18
+WashingtonDC via Boise-link24
+
+FIB router SaltLakeCity
+Atlanta via SaltLakeCity-link2
+Boise via SaltLakeCity-link24
+Chicago via SaltLakeCity-link25
+Dallas via SaltLakeCity-link2
+Houston via SaltLakeCity-link2
+LasVegas via SaltLakeCity-link2
+LosAngeles via SaltLakeCity-link2
+Minneapolis via SaltLakeCity-link25
+Newark via SaltLakeCity-link25
+PaloAlto via SaltLakeCity-link13
+Phoenix via SaltLakeCity-link2
+Portland via SaltLakeCity-link19, SaltLakeCity-link24
+Rochester via SaltLakeCity-link25
+Sacramento via SaltLakeCity-link13
+SaltLakeCity directly connected
+SantaClara via SaltLakeCity-link13
+Seattle via SaltLakeCity-link19, SaltLakeCity-link24
+Spokane via SaltLakeCity-link24
+Tacoma via SaltLakeCity-link19, SaltLakeCity-link24
+WashingtonDC via SaltLakeCity-link25
+
+FIB router Minneapolis
+Atlanta via Minneapolis-link26
+Boise via Minneapolis-link20
+Chicago via Minneapolis-link26
+Dallas via Minneapolis-link26
+Houston via Minneapolis-link26
+LasVegas via Minneapolis-link26
+LosAngeles via Minneapolis-link26
+Minneapolis directly connected
+Newark via Minneapolis-link26
+PaloAlto via Minneapolis-link20
+Phoenix via Minneapolis-link26
+Portland via Minneapolis-link20
+Rochester via Minneapolis-link26
+Sacramento via Minneapolis-link20
+SaltLakeCity via Minneapolis-link26
+SantaClara via Minneapolis-link20
+Seattle via Minneapolis-link20
+Spokane via Minneapolis-link20
+Tacoma via Minneapolis-link20
+WashingtonDC via Minneapolis-link26
+
+FIB router Chicago
+Atlanta via Chicago-link27
+Boise via Chicago-link25
+Chicago directly connected
+Dallas via Chicago-link5
+Houston via Chicago-link5
+LasVegas via Chicago-link25
+LosAngeles via Chicago-link25
+Minneapolis via Chicago-link26
+Newark via Chicago-link27
+PaloAlto via Chicago-link25
+Phoenix via Chicago-link5
+Portland via Chicago-link26
+Rochester via Chicago-link27
+Sacramento via Chicago-link25
+SaltLakeCity via Chicago-link25
+SantaClara via Chicago-link25
+Seattle via Chicago-link26
+Spokane via Chicago-link25
+Tacoma via Chicago-link26
+WashingtonDC via Chicago-link27
+
+FIB router Rochester
+Atlanta via Rochester-link28
+Boise via Rochester-link27
+Chicago via Rochester-link27
+Dallas via Rochester-link27
+Houston via Rochester-link27
+LasVegas via Rochester-link27
+LosAngeles via Rochester-link27
+Minneapolis via Rochester-link27
+Newark via Rochester-link28
+PaloAlto via Rochester-link27
+Phoenix via Rochester-link27
+Portland via Rochester-link27
+Rochester directly connected
+Sacramento via Rochester-link27
+SaltLakeCity via Rochester-link27
+SantaClara via Rochester-link27
+Seattle via Rochester-link27
+Spokane via Rochester-link27
+Tacoma via Rochester-link27
+WashingtonDC via Rochester-link28
+
+FIB router Newark
+Atlanta via Newark-link29
+Boise via Newark-link28
+Chicago via Newark-link28
+Dallas via Newark-link29
+Houston via Newark-link29
+LasVegas via Newark-link29, Newark-link28
+LosAngeles via Newark-link29
+Minneapolis via Newark-link28
+Newark directly connected
+PaloAlto via Newark-link28
+Phoenix via Newark-link29
+Portland via Newark-link28
+Rochester via Newark-link28
+Sacramento via Newark-link28
+SaltLakeCity via Newark-link28
+SantaClara via Newark-link28
+Seattle via Newark-link28
+Spokane via Newark-link28
+Tacoma via Newark-link28
+WashingtonDC via Newark-link29
+
+FIB router WashingtonDC
+Atlanta via WashingtonDC-link21
+Boise via WashingtonDC-link29
+Chicago via WashingtonDC-link29
+Dallas via WashingtonDC-link8
+Houston via WashingtonDC-link8
+LasVegas via WashingtonDC-link8
+LosAngeles via WashingtonDC-link8
+Minneapolis via WashingtonDC-link29
+Newark via WashingtonDC-link29
+PaloAlto via WashingtonDC-link8
+Phoenix via WashingtonDC-link8
+Portland via WashingtonDC-link29
+Rochester via WashingtonDC-link29
+Sacramento via WashingtonDC-link29
+SaltLakeCity via WashingtonDC-link29
+SantaClara via WashingtonDC-link8
+Seattle via WashingtonDC-link29
+Spokane via WashingtonDC-link29
+Tacoma via WashingtonDC-link29
+WashingtonDC directly connected
+
+
+= Time 51 =
+
+= Time 52 =
+
+= Time 53 =
+
+= Time 54 =
+
+= Time 55 =
+
+
+** Simulation Report **
+
+Inconsistent forwarding exact time steps: [1, 2, 3, 4, 5, 6, 7]
+Inconsistent forwarding duration in time units: 7
+Number of FIB writes across all routers: 429
+Number of control-plane packets: 428
+
+Traceroute LasVegas -> Newark
+1: Phoenix
+2: Dallas
+3: WashingtonDC
+4: Newark
+
+Traceroute LasVegas -> Newark
+1: Phoenix
+2: Dallas
+3:
+4: Newark
+
+Packets sent by LasVegas (excluding control-plane ones): 8
+Total number of expired packets received by Dallas: 2
+Interfaces of Dallas that received an expired packet: {'Dallas-link6'}
+Total number of expired packets received by Phoenix: 2
+Interfaces of Phoenix that received an expired packet: {'Phoenix-link1'}
+Total number of expired packets received by Newark: 2
+Interfaces of Newark that received an expired packet: {'Newark-link29'}
+Total number of expired packets received by WashingtonDC: 2
+Interfaces of WashingtonDC that received an expired packet: {'WashingtonDC-link8'}
+

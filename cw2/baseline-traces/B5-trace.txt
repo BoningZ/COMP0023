@@ -1,0 +1,293 @@
+
+** Configuration Loading **
+
+Reading file tests-configs/B5-config.json
+Created router r1
+Created router r2
+Created router r3
+Created router r4
+Created router r5
+Created router r6
+Adding link (r1.r1-r2 <--> r2.r2-r1)
+Adding link (r1.r1-r2 <--> r2.r2-r1)
+Adding link (r2.r2-r3 <--> r3.r3-r2)
+Adding link (r2.r2-r3 <--> r3.r3-r2)
+Adding link (r3.r3-r4 <--> r4.r4-r3)
+Adding link (r3.r3-r4 <--> r4.r4-r3)
+Adding link (r4.r4-r5 <--> r5.r5-r4)
+Adding link (r4.r4-r5 <--> r5.r5-r4)
+Adding link (r5.r5-r6 <--> r6.r6-r5)
+Adding link (r5.r5-r6 <--> r6.r6-r5)
+Adding link (r1.r1-r6 <--> r6.r6-r1)
+Adding link (r1.r1-r6 <--> r6.r6-r1)
+Adding link (r1.r1-r3 <--> r3.r3-r1)
+Adding link (r1.r1-r3 <--> r3.r3-r1)
+Adding Event is dumpfib to occur at 1 with all
+Adding Event is dumpfib to occur at 9 with all
+Adding Event is downlink to occur at 10 with r3-r4 r4-r3
+Adding Event is send to occur at 10 with r3 r4
+Adding Event is send to occur at 11 with r3 r4
+Adding Event is dumpfib to occur at 14 with all
+Adding Event is uplink to occur at 25 with r3-r4 r4-r3
+Adding Event is dumpfib to occur at 30 with all
+
+
+** Simulation **
+
+= Time 1 =
+FIB router r1
+<empty>
+
+FIB router r2
+<empty>
+
+FIB router r3
+<empty>
+
+FIB router r4
+<empty>
+
+FIB router r5
+<empty>
+
+FIB router r6
+<empty>
+
+
+= Time 2 =
+
+= Time 3 =
+
+= Time 4 =
+
+= Time 5 =
+
+= Time 6 =
+
+= Time 7 =
+
+= Time 8 =
+
+= Time 9 =
+FIB router r1
+r1 directly connected
+r2 via r1-r2
+r3 via r1-r2
+r4 via r1-r2
+r5 via r1-r2
+r6 via r1-r6
+
+FIB router r2
+r1 via r2-r1
+r2 directly connected
+r3 via r2-r3
+r4 via r2-r3
+r5 via r2-r3
+r6 via r2-r1
+
+FIB router r3
+r1 via r3-r2
+r2 via r3-r2
+r3 directly connected
+r4 via r3-r4
+r5 via r3-r4
+r6 via r3-r2
+
+FIB router r4
+r1 via r4-r3
+r2 via r4-r3
+r3 via r4-r3
+r4 directly connected
+r5 via r4-r5
+r6 via r4-r3
+
+FIB router r5
+r1 via r5-r4
+r2 via r5-r4
+r3 via r5-r4
+r4 via r5-r4
+r5 directly connected
+r6 via r5-r6
+
+FIB router r6
+r1 via r6-r1
+r2 via r6-r1
+r3 via r6-r1
+r4 via r6-r1
+r5 via r6-r1, r6-r5
+r6 directly connected
+
+
+= Time 10 =
+Setting link (r3.r3-r4 <--> r4.r4-r3) DOWN
+
+Event: Sending one data packet from r3 to r4
+Router r3: Outgoing interface r3-r4 is down, DROP packet type data src r3:5001 dst r4:8080 ttl 255 seq 1
+
+= Time 11 =
+Event: Sending one data packet from r3 to r4
+Router r3: Sent NEW packet type data src r3:5002 dst r4:8080 ttl 254 seq 2 over outgoing interface r3-r2
+
+= Time 12 =
+Router r2: Forwarded packet type data src r3:5002 dst r4:8080 ttl 253 seq 2 path (r3->r2) over outgoing interface r2-r1
+
+= Time 13 =
+Router r1: Forwarded packet type data src r3:5002 dst r4:8080 ttl 252 seq 2 path (r3->r2) (r2->r1) over outgoing interface r1-r6
+
+= Time 14 =
+FIB router r1
+r1 directly connected
+r2 via r1-r2
+r3 via r1-r2
+r4 via r1-r6
+r5 via r1-r6
+r6 via r1-r6
+
+FIB router r2
+r1 via r2-r1
+r2 directly connected
+r3 via r2-r3
+r4 via r2-r1
+r5 via r2-r1
+r6 via r2-r1
+
+FIB router r3
+r1 via r3-r2
+r2 via r3-r2
+r3 directly connected
+r4 via r3-r2
+r5 via r3-r2
+r6 via r3-r2
+
+FIB router r4
+r1 via r4-r5
+r2 via r4-r5
+r3 via r4-r5
+r4 directly connected
+r5 via r4-r5
+r6 via r4-r5
+
+FIB router r5
+r1 via r5-r6
+r2 via r5-r6
+r3 via r5-r6
+r4 via r5-r4
+r5 directly connected
+r6 via r5-r6
+
+FIB router r6
+r1 via r6-r1
+r2 via r6-r1
+r3 via r6-r1
+r4 via r6-r1
+r5 via r6-r1, r6-r5
+r6 directly connected
+
+Router r6: Forwarded packet type data src r3:5002 dst r4:8080 ttl 251 seq 2 path (r3->r2) (r2->r1) (r1->r6) over outgoing interface r6-r1
+
+= Time 15 =
+Router r1: Forwarded packet type data src r3:5002 dst r4:8080 ttl 250 seq 2 path (r3->r2) (r2->r1) (r1->r6) (r6->r1) over outgoing interface r1-r6
+
+= Time 16 =
+Router r6: Forwarded packet type data src r3:5002 dst r4:8080 ttl 249 seq 2 path (r3->r2) (r2->r1) (r1->r6) (r6->r1) (r1->r6) over outgoing interface r6-r5
+
+= Time 17 =
+Router r5: Forwarded packet type data src r3:5002 dst r4:8080 ttl 248 seq 2 path (r3->r2) (r2->r1) (r1->r6) (r6->r1) (r1->r6) (r6->r5) over outgoing interface r5-r4
+
+= Time 18 =
+Router r4: Received packet type data src r3:5002 dst r4:8080 ttl 248 seq 2 path (r3->r2) (r2->r1) (r1->r6) (r6->r1) (r1->r6) (r6->r5) (r5->r4)
+
+= Time 19 =
+
+= Time 20 =
+
+= Time 21 =
+
+= Time 22 =
+
+= Time 23 =
+
+= Time 24 =
+
+= Time 25 =
+Setting link (r3.r3-r4 <--> r4.r4-r3) UP
+
+
+= Time 26 =
+
+= Time 27 =
+
+= Time 28 =
+
+= Time 29 =
+
+= Time 30 =
+FIB router r1
+r1 directly connected
+r2 via r1-r2
+r3 via r1-r2
+r4 via r1-r2
+r5 via r1-r2
+r6 via r1-r6
+
+FIB router r2
+r1 via r2-r1
+r2 directly connected
+r3 via r2-r3
+r4 via r2-r3
+r5 via r2-r3
+r6 via r2-r1
+
+FIB router r3
+r1 via r3-r2
+r2 via r3-r2
+r3 directly connected
+r4 via r3-r4
+r5 via r3-r4
+r6 via r3-r2
+
+FIB router r4
+r1 via r4-r3
+r2 via r4-r3
+r3 via r4-r3
+r4 directly connected
+r5 via r4-r5
+r6 via r4-r3
+
+FIB router r5
+r1 via r5-r4
+r2 via r5-r4
+r3 via r5-r4
+r4 via r5-r4
+r5 directly connected
+r6 via r5-r6, r5-r4
+
+FIB router r6
+r1 via r6-r1
+r2 via r6-r1
+r3 via r6-r1
+r4 via r6-r5
+r5 via r6-r5
+r6 directly connected
+
+
+= Time 31 =
+
+= Time 32 =
+
+= Time 33 =
+
+= Time 34 =
+
+= Time 35 =
+
+
+** Simulation Report **
+
+Inconsistent forwarding exact time steps: [1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 25, 26, 27, 28, 29]
+Inconsistent forwarding duration in time units: 18
+Inconsistent forwarding duration after topology change at time 10: 5
+Inconsistent forwarding duration after topology change at time 25: 5
+Number of FIB writes across all routers: 72
+Number of control-plane packets: 119
+

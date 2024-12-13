@@ -1,0 +1,165 @@
+
+** Metrics for test A0 **
+[Command: python3 simulator/simulator.py -c tests-configs/A0-config.json]
+Inconsistent forwarding duration in time units: 3
+Number of FIB writes across all routers: 16
+Number of control-plane packets: 33
+
+** Metrics for test A1 **
+[Command: python3 simulator/simulator.py -c tests-configs/A1-config.json]
+Inconsistent forwarding duration in time units: 3
+Number of FIB writes across all routers: 17
+Number of control-plane packets: 33
+
+** Metrics for test A2 **
+[Command: python3 simulator/simulator.py -c tests-configs/A2-config.json]
+Inconsistent forwarding duration in time units: 3
+Number of FIB writes across all routers: 17
+Number of control-plane packets: 33
+
+** Metrics for test A3 **
+[Command: python3 simulator/simulator.py -c tests-configs/A3-config.json]
+Inconsistent forwarding duration in time units: 11
+Number of FIB writes across all routers: 19
+Number of control-plane packets: 64
+
+** Metrics for test A4 **
+[Command: python3 simulator/simulator.py -c tests-configs/A4-config.json]
+Inconsistent forwarding duration in time units: 7
+Number of FIB writes across all routers: 429
+Number of control-plane packets: 428
+
+** Metrics for test B0 **
+[Command: python3 simulator/simulator.py -c tests-configs/B0-config.json]
+Inconsistent forwarding duration in time units: 3
+Inconsistent forwarding duration after topology change at time 13: 0
+Number of FIB writes across all routers: 19
+Number of control-plane packets: 39
+
+** Metrics for test B1 **
+[Command: python3 simulator/simulator.py -c tests-configs/B1-config.json]
+Inconsistent forwarding duration in time units: 34
+Inconsistent forwarding duration after topology change at time 30: 10
+Number of FIB writes across all routers: 60
+Number of control-plane packets: 184
+
+** Metrics for test B2 **
+[Command: python3 simulator/simulator.py -c tests-configs/B2-config.json]
+Inconsistent forwarding duration in time units: 6
+Inconsistent forwarding duration after topology change at time 4: 3
+Number of FIB writes across all routers: 53
+Number of control-plane packets: 72
+
+** Metrics for test B3 **
+[Command: python3 simulator/simulator.py -c tests-configs/B3-config.json]
+Inconsistent forwarding duration in time units: 9
+Inconsistent forwarding duration after topology change at time 12: 2
+Inconsistent forwarding duration after topology change at time 20: 2
+Number of FIB writes across all routers: 74
+Number of control-plane packets: 93
+
+** Metrics for test B4 **
+[Command: python3 simulator/simulator.py -c tests-configs/B4-config.json]
+Inconsistent forwarding duration in time units: 10
+Inconsistent forwarding duration after topology change at time 5: 4
+Inconsistent forwarding duration after topology change at time 25: 2
+Number of FIB writes across all routers: 519
+Number of control-plane packets: 511
+
+** Metrics for test B5 **
+[Command: python3 simulator/simulator.py -c tests-configs/B5-config.json]
+Inconsistent forwarding duration in time units: 18
+Inconsistent forwarding duration after topology change at time 10: 5
+Inconsistent forwarding duration after topology change at time 25: 5
+Number of FIB writes across all routers: 72
+Number of control-plane packets: 119
+
+** Metrics for test B6 **
+[Command: python3 simulator/simulator.py -c tests-configs/B6-config.json]
+Inconsistent forwarding duration in time units: 7
+Inconsistent forwarding duration after topology change at time 15: 2
+Number of FIB writes across all routers: 66
+Number of control-plane packets: 89
+
+** Metrics for test B7 **
+[Command: python3 simulator/simulator.py -c tests-configs/B7-config.json]
+Inconsistent forwarding duration in time units: 16
+Inconsistent forwarding duration after topology change at time 15: 5
+Inconsistent forwarding duration after topology change at time 20: 3
+Number of FIB writes across all routers: 70
+Number of control-plane packets: 115
+
+** Metrics for test B8 **
+[Command: python3 simulator/simulator.py -c tests-configs/B8-config.json]
+Inconsistent forwarding duration in time units: 5
+Inconsistent forwarding duration after topology change at time 11: 1
+Number of FIB writes across all routers: 37
+Number of control-plane packets: 75
+
+** Metrics for test B9 **
+[Command: python3 simulator/simulator.py -c tests-configs/B9-config.json]
+Inconsistent forwarding duration in time units: 15
+Inconsistent forwarding duration after topology change at time 11: 3
+Inconsistent forwarding duration after topology change at time 20: 2
+Inconsistent forwarding duration after topology change at time 25: 1
+Inconsistent forwarding duration after topology change at time 30: 4
+Number of FIB writes across all routers: 112
+Number of control-plane packets: 183
+
+** Metrics for test C0 **
+[Command: python3 simulator/simulator.py -c tests-configs/C0-config.json]
+Traceroute LasVegas -> Newark
+1: Phoenix
+2: Dallas
+3: WashingtonDC
+4: Newark
+Traceroute LasVegas -> Newark
+1: Phoenix
+2: Dallas
+3:
+4: Newark
+Packets sent by LasVegas (excluding control-plane ones): 8
+Total number of expired packets received by Dallas: 2
+Interfaces of Dallas that received an expired packet: {'Dallas-link6'}
+Total number of expired packets received by Phoenix: 2
+Interfaces of Phoenix that received an expired packet: {'Phoenix-link1'}
+Total number of expired packets received by Newark: 2
+Interfaces of Newark that received an expired packet: {'Newark-link29'}
+Total number of expired packets received by WashingtonDC: 2
+Interfaces of WashingtonDC that received an expired packet: {'WashingtonDC-link8'}
+
+** Metrics for test C1 **
+[Command: python3 simulator/simulator.py -c tests-configs/C1-config.json]
+Traceroute r1 -> r3
+1: r2,r3
+2: r3
+Traceroute r0 -> r3
+1:
+2: r2,r3
+3: r3
+Traceroute r0 -> r3
+1:
+2: r2
+3: r3
+Packets sent by r0 (excluding control-plane ones): 8
+Packets sent by r1 (excluding control-plane ones): 3
+Total number of expired packets received by r1: 3
+Interfaces of r1 that received an expired packet: {'r1-r0'}
+Total number of expired packets received by r2: 3
+Interfaces of r2 that received an expired packet: {'r2-r1'}
+Total number of expired packets received by r3: 5
+Interfaces of r3 that received an expired packet: {'r3-r1', 'r3-r2'}
+
+** Metrics for test C2 **
+[Command: python3 simulator/simulator.py -c tests-configs/C2-config.json]
+Traceroute r0 -> r3
+1: r1
+2: r3
+3: r3
+Packets sent by r0 (excluding control-plane ones): 6
+Total number of expired packets received by r1: 2
+Interfaces of r1 that received an expired packet: {'r1-r0'}
+Total number of expired packets received by r2: 1
+Interfaces of r2 that received an expired packet: {'r2-r1'}
+Total number of expired packets received by r3: 2
+Interfaces of r3 that received an expired packet: {'r3-r1', 'r3-r2'}

@@ -1,0 +1,196 @@
+{
+  "routers": [
+    {
+      "rId": "r1",
+      "numOfInterfaces": 3,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "r2",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "r3",
+      "numOfInterfaces": 3,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "r4",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "r5",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "r6",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP"
+    }
+  ],
+  "links": [
+    {
+      "id": "r1-r2",
+      "interfaces": ["r1-r2", "r2-r1"],
+      "status": "up"
+    },
+    {
+      "id": "r2-r3",
+      "interfaces": ["r2-r3", "r3-r2"],
+      "status": "up"
+    },
+    {
+      "id": "r3-r4",
+      "interfaces": ["r3-r4", "r4-r3"],
+      "status": "up"
+    },
+    {
+      "id": "r4-r5",
+      "interfaces": ["r4-r5", "r5-r4"],
+      "status": "up"
+    },
+    {
+      "id": "r5-r6",
+      "interfaces": ["r5-r6", "r6-r5"],
+      "status": "up"
+    },
+    {
+      "id": "r6-r1",
+      "interfaces": ["r1-r6", "r6-r1"],
+      "status": "up"
+    },
+    {
+      "id": "r1-r3",
+      "interfaces": ["r1-r3", "r3-r1"],
+      "status": "up"
+    }
+  ],
+  "routingProtocols": {
+    "IGP": {
+      "r1": {
+        "weights": {
+          "r1-r2": 1,
+          "r1-r3": 10,
+          "r1-r6": 1
+        }
+      },
+      "r2": {
+        "weights": {
+          "r2-r1": 1,
+          "r2-r3": 1
+        }
+      },
+      "r3": {
+        "weights": {
+          "r3-r1": 6,
+          "r3-r2": 1,
+          "r3-r4": 1
+        }
+      },
+      "r4": {
+        "weights": {
+          "r4-r3": 1,
+          "r4-r5": 1
+        }
+      },
+      "r5": {
+        "weights": {
+          "r5-r4": 1,
+          "r5-r6": 5
+        }
+      },
+      "r6": {
+        "weights": {
+          "r6-r1": 1,
+          "r6-r5": 5
+        }
+      }
+    }
+  },
+  "events": [
+    {
+      "type": "dumpfib",
+      "time": 1,
+      "args": "all"
+    },
+    {
+      "type": "dumpfib",
+      "time": 8,
+      "args": "all"
+    },
+    {
+      "type": "send",
+      "time": 8,
+      "src": "r4",
+      "dest": "r1"
+    },
+    {
+      "type": "send",
+      "time": 8,
+      "src": "r1",
+      "dest": "r4"
+    },
+    {
+      "type": "downlink",
+      "time": 12,
+      "link": ["r2-r3", "r3-r2"]
+    },
+    {
+      "type": "dumpfib",
+      "time": 15,
+      "args": "all"
+    },
+    {
+      "type": "send",
+      "time": 15,
+      "src": "r4",
+      "dest": "r1"
+    },
+    {
+      "type": "send",
+      "time": 15,
+      "src": "r4",
+      "dest": "r1"
+    },
+    {
+      "type": "send",
+      "time": 15,
+      "src": "r1",
+      "dest": "r4"
+    },
+    {
+      "type": "downlink",
+      "time": 20,
+      "link": ["r4-r5", "r5-r4"]
+    },
+    {
+      "type": "dumpfib",
+      "time": 20,
+      "args": "all"
+    },
+    {
+      "type": "dumpfib",
+      "time": 25,
+      "args": "all"
+    },
+    {
+      "type": "send",
+      "time": 25,
+      "src": "r4",
+      "dest": "r1"
+    },
+    {
+      "type": "send",
+      "time": 25,
+      "src": "r1",
+      "dest": "r4"
+    },
+    {
+      "type": "stop",
+      "time": 31
+    }
+  ]
+}

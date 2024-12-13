@@ -1,0 +1,131 @@
+{
+  "routers": [
+     {
+      "rId": "r0",
+      "numOfInterfaces": 1,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "r1",
+      "numOfInterfaces": 4,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "r2",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "r3",
+      "numOfInterfaces": 3,
+      "routingProtocol": "IGP"
+    },
+    {
+      "rId": "r4",
+      "numOfInterfaces": 2,
+      "routingProtocol": "IGP"
+    }
+  ],
+  "links": [
+    {
+      "id": "r0-r1",
+      "interfaces": ["r0-r1", "r1-r0"],
+      "status": "up" 
+   },
+    {
+      "id": "r1-r2",
+      "interfaces": ["r1-r2", "r2-r1"],
+      "status": "up"
+    },
+    {
+      "id": "r1-r3",
+      "interfaces": ["r1-r3", "r3-r1"],
+      "status": "up"
+    },
+    {
+      "id": "r1-r4",
+      "interfaces": ["r1-r4", "r4-r1"],
+      "status": "up"
+    },
+    {
+      "id": "r2-r3",
+      "interfaces": ["r2-r3", "r3-r2"],
+      "status": "up"
+    },
+    {
+      "id": "r3-r4",
+      "interfaces": ["r3-r4", "r4-r3"],
+      "status": "up"
+    }
+  ],
+  "routingProtocols": {
+    "IGP": {
+      "r0": {
+        "weights": {
+          "r0-r1": 1
+        }
+      },
+      "r1": {
+        "weights": {
+          "r1-r0": 1,
+          "r1-r2": 1,
+          "r1-r3": 2,
+          "r1-r4": 1
+        }
+      },
+      "r2": {
+        "weights": {
+          "r2-r1": 1,
+          "r2-r3": 1
+        }
+      },
+      "r3": {
+        "weights": {
+          "r3-r1": 1,
+          "r3-r2": 1,
+          "r3-r4": 10
+        }
+      },
+      "r4": {
+        "weights": {
+          "r4-r1": 1,
+          "r4-r3": 10
+        }
+      }
+    }
+  },
+  "events": [
+    {
+      "type": "dumpfib",
+      "time": 1,
+      "args": "all"
+    },
+    {
+      "type": "dumpfib",
+      "time": 14,
+      "args": "all"
+    },
+    {
+      "type": "stopOriginateIcmp",
+      "time": 15,
+      "router": "r2",
+      "interface": "r2-r1"
+    },
+    {
+      "type": "traceroute",
+      "time": 25,
+      "src": "r0",
+      "dest": "r3"
+    },
+    {
+      "type": "send",
+      "time": 25,
+      "src": "r0",
+      "dest": "r4"
+    },
+    {
+      "type": "stop",
+      "time": 35
+    }
+  ]
+}
